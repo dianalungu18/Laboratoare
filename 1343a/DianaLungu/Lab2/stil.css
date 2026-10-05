@@ -1,0 +1,77 @@
+.meniu {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.meniu a {
+    margin-right: 15px;
+    color: darkblue;
+    text-decoration: none;
+}
+
+.meniu a:hover {
+    color: #ff4500;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.descriere {
+    background-color: yellow;
+    color: blue;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 2px solid magenta;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #b0e0e6;
+    color: #000080;
+    font-weight: bold;
+}
+
+td {
+    background-color: #90ee90;
+    color: #8b0000;
+}
+
+.celula-albastra {
+    background-color: #b0e0e6;
+    color: #000080;
+    font-weight: bold;
+}
+
+.lista-muzica {
+    background-color: lightcyan;
+    color: darkgreen;
+    padding: 20px;
+}
+
+img {
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
