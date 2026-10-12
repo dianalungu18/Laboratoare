@@ -15,7 +15,6 @@
             color: #2c3e50;
         }
 
-        
         ul {
             list-style-type: none; 
             padding: 0;
@@ -27,34 +26,45 @@
             margin-bottom: 10px;
         }
 
+        /* Stilul general pentru toate butoanele */
         li a {
             display: inline-block;
-            width: 170px;             
+            width: 170px;              
             text-align: center;
-            background-color: #007bff; 
-            color: white;             
+            color: white;              
             padding: 12px 15px;
             text-decoration: none;    
-            border-radius: 6px;       
+            border-radius: 6px;        
             font-weight: bold;
             transition: background-color 0.2s;
         }
 
-       
-        li a:hover {
-            background-color: #0056b3; 
-        }
+        /* Culori unice pentru fiecare buton (Exercițiul 5) */
+        .btn-indicatii { background-color: #007bff; }
+        .btn-indicatii:hover { background-color: #0056b3; }
+
+        .btn-inline { background-color: #28a745; }
+        .btn-inline:hover { background-color: #218838; }
+
+        .btn-intern { background-color: #e67e22; }
+        .btn-intern:hover { background-color: #d35400; }
+
+        .btn-extern { background-color: #9b59b6; }
+        .btn-extern:hover { background-color: #8e44ad; }
+
+        .btn-home { background-color: #34495e; }
+        .btn-home:hover { background-color: #2c3e50; }
     </style>
 </head>
 <body>
     <h1>Laboratorul 3 stiluri CSS</h1>
     
     <ul>
-        <li><a href="FormtareText.html">Indicaţii</a></li>
-        <li><a href="FormtareText_inline.html">Stiluri inline</a></li>
-        <li><a href="FormtareText_internal.html">Stiluri interne</a></li>
-        <li><a href="FormtareText_external.html">Stiluri externe</a></li>
-        <li><a href="../index.html">Laboratoarele mele</a></li>
+        <li><a href="FormtareText.html" class="btn-indicatii">Indicaţii</a></li>
+        <li><a href="FormtareText_inline.html" class="btn-inline">Stiluri inline</a></li>
+        <li><a href="FormtareText_internal.html" class="btn-intern">Stiluri interne</a></li>
+        <li><a href="FormtareText_external.html" class="btn-extern">Stiluri externe</a></li>
+        <li><a href="../index.html" class="btn-home">Laboratoarele mele</a></li>
     </ul>
 </body>
 </html>
