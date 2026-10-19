@@ -9,58 +9,48 @@
         font-variant: small-caps;
         color: magenta;
     }
-
+    h1, caption {
+        color: blue;
+        background-color: #cccc00;
+    }
     body {
         background-color: #ffffcc;
     }
-
     .center, p {
         text-align: center;
         color: red;
     }
 
-    /* === Stiluri Exercițiul 6 === */
-    
-    
-    table {
-        border-collapse: collapse;
-        width: 100%;
+    /* Exercitiul 4 & 6: chenare verzi, contopite si spatiu generos in celule */
+    table, th, td {
         border: 2px solid green;
+        border-collapse: collapse;
+        padding: 15px;
     }
 
-    
+    /* Exercitiul 6: titlu alb, mare, pe fond portocaliu */
     caption {
-        background-color: orange;
         color: white;
-        font-size: 1.4em;
-        font-weight: bold;
-        padding: 10px;
+        background-color: orange;
+        font-size: 24px;
+        padding: 8px;
     }
 
-    
+    /* Exercitiul 6: antet pe fond magenta */
     th {
         background-color: magenta;
-        color: black;
-        border: 1px solid green;
-        padding: 12px;
-        text-align: center;
     }
 
-    
+    /* Exercitiul 6: celule portocalii */
     td {
         background-color: orange;
-        color: black;
-        border: 1px solid green;
-        padding: 10px;
-        text-align: center;
     }
 
-    
-    td.echipa {
+    /* Exercitiul 6: celulele cu numele echipelor magenta, ingrosate si centrate */
+    td[rowspan] {
         background-color: magenta;
         font-weight: bold;
         text-align: center;
-        vertical-align: middle;
     }
 
 </style>
@@ -68,18 +58,17 @@
 <body>
 
 <h1 id="hd">Tabel special</h1>
-<p>Un tabel cu "celule lipite"</p> 
-
-<table>
-  <caption>Echipe si hobby-uri</caption>
+<p>Un tabel cu "celule lipite"
+</p> 
+<table style="width:100%">
+<caption>Echipe si hobby-uri</caption>
   <tr>
     <th>Echipa</th>
     <th>Nume</th>
     <th colspan="2">Pasiuni</th>
   </tr>
   <tr>
-    <!-- Clasa "echipa" aplică fondul magenta și textul îngroșat -->
-    <td rowspan="3" class="echipa">Munte</td>
+    <td rowspan="3">Munte</td>
     <td>Popescu</td>
     <td>calatorii</td>
     <td>filatelie</td>
@@ -90,12 +79,12 @@
     <td>sah</td>
   </tr>
   <tr>
-    <td>Ștefănescu</td>
-    <td>cantat</td>
-    <td>olarit</td>
+    <td>Radu</td>
+    <td>alpinism</td>
+    <td>fotografie</td>
   </tr>
   <tr>
-    <td rowspan="4" class="echipa">Mare</td>
+    <td rowspan="4">Mare</td>
     <td>Georgescu</td>
     <td>plaja</td>
     <td>dans</td>
@@ -106,16 +95,22 @@
     <td>samba</td>
   </tr>
   <tr>
-    <td>Mintescu</td>
-    <td>politica</td>
-    <td>delicateturi</td>
+    <td>Iliescu</td>
+    <td>dans</td>
+    <td>olarit</td>
   </tr>
   <tr>
-    <td>Iliescu</td>
-    <td>pictat</td>
-    <td>gimnastica</td>
+    <td>Tomescu</td>
+    <td>cantat</td>
+    <td>tenis</td>
   </tr>
 </table>
 
+<!--
+Analiza Exercitiul 4:
+Initial, tabelul nu avea nicio regula CSS pentru table, th sau td, motiv pentru 
+care celulele nu aveau chenare sau spatiu interior (padding), iar structura cu 
+celule unite pe coloane (colspan="2") si pe randuri (rowspan) era greu de urmarit.
+-->
 </body>
 </html>
