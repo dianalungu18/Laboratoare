@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>L6_B – Buton și două paragrafe</title>
+</head>
+<body>
+
+<h1>Paragrafe modificabile</h1>
+
+<button type="button" id="schimba">Schimbă paragrafele între ele</button>
+
+<p id="p1" style="color: darkblue; background-color: lightyellow; font-size: 20px;">
+    Primul paragraf: dă clic pe mine ca să-mi schimbi textul.
+</p>
+
+<p id="p2" style="color: white; background-color: darkgreen; font-style: italic;">
+    Al doilea paragraf: și eu pot primi un text nou.
+</p>
+
+<p><a href="index.html">Înapoi la laboratorul 6</a></p>
+
+<script>
+var p1 = document.getElementById("p1");
+var p2 = document.getElementById("p2");
+
+
+function cereText() {
+    var text = prompt("Introduceți textul nou al paragrafului:", this.innerHTML.trim());
+    if (text !== null && text !== "") {
+        this.innerHTML = text;
+    }
+}
+p1.onclick = cereText;
+p2.onclick = cereText;
+
+
+document.getElementById("schimba").onclick = function () {
+    var aux = p1.innerHTML;
+    p1.innerHTML = p2.innerHTML;
+    p2.innerHTML = aux;
+};
+</script>
+
+</body>
+</html>

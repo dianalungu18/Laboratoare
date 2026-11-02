@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>L6_C – Culori cerute prin prompt</title>
+</head>
+<body>
+
+<h1 id="titlu">Culori alese de utilizator</h1>
+
+<p id="par">
+    Dă clic pe titlu ca să-i schimbi culoarea textului.<br>
+    Dă clic pe acest paragraf ca să-i schimbi culoarea de fundal.<br>
+    Poți scrie red, #ff0000 sau rgb(255,0,0).
+</p>
+
+<p><a href="index.html">Înapoi la laboratorul 6</a></p>
+
+<script>
+document.getElementById("titlu").onclick = function () {
+    var c = prompt("Introduceți culoarea textului titlului:", "blue");
+    if (c === null) {
+        return;                              
+    }
+    if (CSS.supports("color", c)) {
+        this.style.color = c;
+    } else {
+        alert("Culoarea „" + c + "” nu este corectă!");
+    }
+};
+
+document.getElementById("par").onclick = function () {
+    var c = prompt("Introduceți culoarea de fundal a paragrafului:", "yellow");
+    if (c === null) {
+        return;
+    }
+    if (CSS.supports("color", c)) {
+        this.style.backgroundColor = c;
+    } else {
+        alert("Culoarea „" + c + "” nu este corectă!");
+    }
+};
+</script>
+
+</body>
+</html>
